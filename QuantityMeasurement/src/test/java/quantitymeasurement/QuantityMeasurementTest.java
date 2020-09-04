@@ -68,4 +68,18 @@ public class QuantityMeasurementTest {
         Integer int1 = 0;
         Assert.assertNotEquals(feet1.getClass(), int1.getClass());
     }
+
+    @Test
+    public void given2Lengths_whenOfTypeInchAndBothHasValueZero_shouldBeEqual() {
+        Inch inch1 = new Inch(0.0);
+        Inch inch2 = new Inch(0.0);
+        Assert.assertEquals(inch1, inch2);
+    }
+
+    @Test
+    public void given2Lengths_whenOfTypeInchAndBothHasValueZeroAndOne_shouldBeUnequal() {
+        Inch inch1 = new Inch(0.0);
+        Inch inch2 = new Inch(1.0);
+        Assert.assertNotEquals(inch1, inch2);
+    }
 }

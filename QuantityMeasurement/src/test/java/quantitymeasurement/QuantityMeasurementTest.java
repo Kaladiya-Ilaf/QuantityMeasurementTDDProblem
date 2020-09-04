@@ -103,4 +103,18 @@ public class QuantityMeasurementTest {
         boolean nullCheck = Objects.nonNull(inch1);
         Assert.assertTrue(nullCheck);
     }
+
+    @Test
+    public void  given2Lengths_whenOfTypeInchAndBothHasSameReference_shouldBeEqual() {
+        Inch inch1 = new Inch(0.0);
+        Inch inch2 = inch1;
+        Assert.assertSame(inch1, inch2);
+    }
+
+    @Test
+    public void  given2Lengths_whenOfTypeInchAndBothHasDifferentReference_shouldBeUnequal() {
+        Inch inch1 = new Inch(0.0);
+        Inch inch2 = new Inch(1.0);
+        Assert.assertNotSame(inch1, inch2);
+    }
 }

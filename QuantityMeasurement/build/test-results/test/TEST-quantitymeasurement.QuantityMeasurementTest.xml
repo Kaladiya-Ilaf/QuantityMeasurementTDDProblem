@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="quantitymeasurement.QuantityMeasurementTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-09-04T17:23:37" hostname="ilaf-Inspiron-15-3567" time="0.215">
+<testsuite name="quantitymeasurement.QuantityMeasurementTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-09-04T17:30:45" hostname="ilaf-Inspiron-15-3567" time="0.113">
   <properties/>
-  <testcase name="given1Length_whenOfTypeFeetAndHasValueNotNull_shouldReturnTrue" classname="quantitymeasurement.QuantityMeasurementTest" time="0.215"/>
+  <testcase name="given2Lengths_whenOfTypeFeetAndBothHasDifferentReference_shouldBeUnequal" classname="quantitymeasurement.QuantityMeasurementTest" time="0.113"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

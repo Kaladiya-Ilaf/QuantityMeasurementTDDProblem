@@ -117,4 +117,19 @@ public class QuantityMeasurementTest {
         Inch inch2 = new Inch(1.0);
         Assert.assertNotSame(inch1, inch2);
     }
+
+    @Test
+    public void given2Lengths_whenHasSameTypesInch_shouldBeEqual() {
+        Inch inch1 = new Inch(0.0);
+        Inch inch2 = new Inch(1.0);
+        Assert.assertEquals(inch1.getClass(), inch2.getClass());
+    }
+
+    @Test
+    public void given2Lengths_whenHasDifferentTypesInchAndInteger_shouldBeUnequal() {
+        Inch inch1 = new Inch(0.0);
+        Integer int1 = 0;
+        Assert.assertNotEquals(inch1.getClass(), int1.getClass());
+    }
+
 }

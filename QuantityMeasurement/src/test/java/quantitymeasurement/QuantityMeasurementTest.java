@@ -251,4 +251,20 @@ public class QuantityMeasurementTest {
         boolean compareCheck = yard.compareUnits(feet);
         Assert.assertTrue(compareCheck);
     }
+
+    @Test
+    public void given2Lengths_whenOfTypeCentimeterAndBothHasValueZero_shouldBeEqual() {
+        QuantityMeasurement cm1 = new QuantityMeasurement(Unit.CENTIMETER, 0.0);
+        QuantityMeasurement cm2 = new QuantityMeasurement(Unit.CENTIMETER, 0.0);
+        Assert.assertEquals(cm1, cm2);
+    }
+
+    @Test
+    public void given2Lengths_whenOfTypeCentimeterAndBothHasValueZeroAndOne_shouldBeUnequal() {
+        QuantityMeasurement cm1 = new QuantityMeasurement(Unit.CENTIMETER, 0.0);
+        QuantityMeasurement cm2 = new QuantityMeasurement(Unit.CENTIMETER, 1.0);
+        Assert.assertNotEquals(cm1, cm2);
+    }
+
+
 }

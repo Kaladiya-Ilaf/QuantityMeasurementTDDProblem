@@ -425,4 +425,19 @@ public class QuantityMeasurementTest {
         Assert.assertNotEquals(gallon1.getClass(), int1.getClass());
     }
 
+    @Test
+    public void given2Volumes_whenOfTypeLitreAndBothHasValueZero_shouldBeEqual() {
+        QuantityMeasurement litre1 = new QuantityMeasurement(Unit.LITRE, 0.0);
+        QuantityMeasurement litre2 = new QuantityMeasurement(Unit.LITRE, 0.0);
+        Assert.assertEquals(litre1, litre2);
+    }
+
+    @Test
+    public void given2VOlumes_whenOfTypeLitreAndBothHasValueZeroAndOne_shouldBeUnequal() {
+        QuantityMeasurement litre1 = new QuantityMeasurement(Unit.LITRE, 0.0);
+        QuantityMeasurement litre2 = new QuantityMeasurement(Unit.LITRE, 0.0);
+        Assert.assertNotEquals(litre1, litre2);
+    }
+
+
 }

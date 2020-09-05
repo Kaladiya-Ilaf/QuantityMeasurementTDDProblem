@@ -140,4 +140,20 @@ public class QuantityMeasurementTest {
         boolean compareCheck = feet.compare(inch);
         Assert.assertTrue(compareCheck);
     }
+
+    @Test
+    public void given2Lengths_whenOfTypeYardAndBothHasValueZero_shouldBeEqual() {
+        QuantityMeasurement yard1 = new QuantityMeasurement(Unit.YARD, 0.0);
+        QuantityMeasurement yard2 = new QuantityMeasurement(Unit.YARD, 0.0);
+        Assert.assertEquals(yard1, yard2);
+    }
+
+    @Test
+    public void given2Lengths_whenOfTypeYardAndBothHasValueZeroAndOne_shouldBeUnequal() {
+        QuantityMeasurement yard1 = new QuantityMeasurement(Unit.YARD, 0.0);
+        QuantityMeasurement yard2 = new QuantityMeasurement(Unit.YARD, 1.0);
+        Assert.assertNotEquals(yard1, yard2);
+    }
+
+
 }

@@ -219,4 +219,12 @@ public class QuantityMeasurementTest {
         boolean compareCheck = feet.compareUnits(yard);
         Assert.assertFalse(compareCheck);
     }
+
+    @Test
+    public void given2Lenghts_when1YardWithValue1And1InchWithValue1_shouldReturnFalse() {
+        QuantityMeasurement inch = new QuantityMeasurement(Unit.INCH, 1);
+        QuantityMeasurement yard = new QuantityMeasurement(Unit.YARD, 1);
+        boolean compareCheck = inch.compareUnits(yard);
+        Assert.assertFalse(compareCheck);
+    }
 }

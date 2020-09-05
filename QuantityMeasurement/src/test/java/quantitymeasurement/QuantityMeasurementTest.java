@@ -301,5 +301,18 @@ public class QuantityMeasurementTest {
         Assert.assertNotSame(cm1, cm2);
     }
 
+    @Test
+    public void given2Lengths_whenHasSameTypesCentimeter_shouldBeEqual() {
+        QuantityMeasurement cm1 = new QuantityMeasurement(Unit.CENTIMETER, 0.0);
+        QuantityMeasurement cm2 = new QuantityMeasurement(Unit.CENTIMETER, 1.0);
+        Assert.assertEquals(cm1.getClass(), cm2.getClass());
+    }
+
+    @Test
+    public void given2Lengths_whenHasDifferentTypesCentimeter_shouldBeUnequal() {
+        QuantityMeasurement cm1 = new QuantityMeasurement(Unit.CENTIMETER, 0.0);
+        Integer int1 = 0;
+        Assert.assertNotEquals(cm1.getClass(), int1.getClass());
+    }
 
 }

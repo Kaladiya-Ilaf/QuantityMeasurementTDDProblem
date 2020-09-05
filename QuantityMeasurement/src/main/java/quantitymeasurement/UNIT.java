@@ -9,7 +9,8 @@ enum Unit {
     LITRE(UnitType.VOLUME,1),
     MILLILITRE(UnitType.VOLUME, 0.001),
     KILOGRAM(UnitType.WEIGHT, 1),
-    GRAM(UnitType.WEIGHT, 0.001);
+    GRAM(UnitType.WEIGHT, 0.001),
+    TONNE(UnitType.WEIGHT, 1000);
 
     public final double baseUnit;
     UnitType unitType;

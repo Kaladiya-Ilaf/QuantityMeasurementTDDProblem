@@ -648,6 +648,69 @@ public class QuantityMeasurementTest {
     }
 
     @Test
+    public void given2Weights_whenOfTypeTonnesAndBothHasValueZero_shouldBeEqual() {
+        QuantityMeasurement tonne1 = new QuantityMeasurement(Unit.TONNE, 0.0);
+        QuantityMeasurement tonne2 = new QuantityMeasurement(Unit.TONNE, 0.0);
+        Assert.assertEquals(tonne1, tonne2);
+    }
+
+    @Test
+    public void given2Weights_whenOfTypeTonneAndBothHasValueZeroAndOne_shouldBeUnequal() {
+        QuantityMeasurement tonne1 = new QuantityMeasurement(Unit.TONNE, 0.0);
+        QuantityMeasurement tonne2 = new QuantityMeasurement(Unit.TONNE, 1.0);
+        Assert.assertNotEquals(tonne1, tonne2);
+    }
+
+    @Test
+    public void  given2Weights_whenOfTypeTonneAndBothHasValueZeroAndNull_shouldBeUnequal() {
+        QuantityMeasurement tonne1 = new QuantityMeasurement(Unit.TONNE, 0.0);
+        QuantityMeasurement tonne2 =null;
+        Assert.assertNotEquals(tonne1, tonne2);
+    }
+
+    @Test
+    public void  given1Weight_whenOfTypeTonneAndHasValueNull_shouldReturnTrue() {
+        QuantityMeasurement tonne = null;
+        boolean nullCheck = Objects.isNull(tonne);
+        Assert.assertTrue(nullCheck);
+    }
+
+    @Test
+    public void  given1Weight_whenOfTypeTonneAndHasValueNotNull_shouldReturnTrue() {
+        QuantityMeasurement tonne = new QuantityMeasurement(Unit.TONNE, 0.0);
+        boolean nullCheck = Objects.nonNull(tonne);
+        Assert.assertTrue(nullCheck);
+    }
+
+    @Test
+    public void  given2Weights_whenOfTypeTonneAndBothHasSameReference_shouldBeEqual() {
+        QuantityMeasurement tonne1 = new QuantityMeasurement(Unit.TONNE, 0.0);
+        QuantityMeasurement tonne2 = tonne1;
+        Assert.assertSame(tonne1, tonne2);
+    }
+
+    @Test
+    public void  given2Weights_whenOfTypeTOnneAndBothHasDifferentReference_shouldBeUnequal() {
+        QuantityMeasurement tonne1 = new QuantityMeasurement(Unit.TONNE, 0.0);
+        QuantityMeasurement tonne2 = new QuantityMeasurement(Unit.TONNE, 1.0);
+        Assert.assertNotSame(tonne1, tonne2);
+    }
+
+    @Test
+    public void given2Weights_whenHasSameTypesTonne_shouldBeEqual() {
+        QuantityMeasurement tonne1 = new QuantityMeasurement(Unit.TONNE, 0.0);
+        QuantityMeasurement tonne2 = new QuantityMeasurement(Unit.TONNE, 1.0);
+        Assert.assertEquals(tonne1.getClass(), tonne2.getClass());
+    }
+
+    @Test
+    public void given2Weights_whenHasDifferentTypesTonne_shouldBeUnequal() {
+        QuantityMeasurement tonne = new QuantityMeasurement(Unit.TONNE, 0.0);
+        Integer int1 = 0;
+        Assert.assertNotEquals(tonne.getClass(), int1.getClass());
+    }
+
+    @Test
     public void given2Weights_whenOfTypeKilogramAndBothHasValueZero_shouldBeEqual() {
         QuantityMeasurement kilogram1 = new QuantityMeasurement(Unit.KILOGRAM, 0.0);
         QuantityMeasurement kilogram2 = new QuantityMeasurement(Unit.KILOGRAM, 0.0);

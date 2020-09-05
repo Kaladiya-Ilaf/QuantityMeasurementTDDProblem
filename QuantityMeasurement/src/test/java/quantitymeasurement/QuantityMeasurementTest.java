@@ -287,7 +287,19 @@ public class QuantityMeasurementTest {
         Assert.assertTrue(nullCheck);
     }
 
+    @Test
+    public void  given2Lengths_whenOfTypeCentimeterAndBothHasSameReference_shouldBeEqual() {
+        QuantityMeasurement cm1 = new QuantityMeasurement(Unit.CENTIMETER, 0.0);
+        QuantityMeasurement cm2 = cm1;
+        Assert.assertSame(cm1, cm2);
+    }
 
+    @Test
+    public void  given2Lengths_whenOfTypeCentimeterAndBothHasDifferentReference_shouldBeUnequal() {
+        QuantityMeasurement cm1 = new QuantityMeasurement(Unit.CENTIMETER, 0.0);
+        QuantityMeasurement cm2 = new QuantityMeasurement(Unit.CENTIMETER, 1.0);
+        Assert.assertNotSame(cm1, cm2);
+    }
 
 
 }

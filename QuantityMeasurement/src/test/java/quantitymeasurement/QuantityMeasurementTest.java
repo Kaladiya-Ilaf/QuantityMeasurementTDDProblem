@@ -502,5 +502,27 @@ public class QuantityMeasurementTest {
         Assert.assertNotEquals(millilitre1, millilitre2);
     }
 
+    @Test
+    public void  given2Volume_whenOfTypeMillilitreAndBothHasValueZeroAndNull_shouldBeUnequal() {
+        QuantityMeasurement millilitre1 = new QuantityMeasurement(Unit.MILLILITRE, 0.0);
+        QuantityMeasurement millilitre2 =null;
+        Assert.assertNotEquals(millilitre1, millilitre2);
+    }
+
+    @Test
+    public void  given1Volume_whenOfTypeMillilitreAndHasValueNull_shouldReturnTrue() {
+        QuantityMeasurement millilitre = null;
+        boolean nullCheck = Objects.isNull(millilitre);
+        Assert.assertTrue(nullCheck);
+    }
+
+    @Test
+    public void  given1Volume_whenOfTypeMillilitreAndHasValueNotNull_shouldReturnTrue() {
+        QuantityMeasurement millilitre = new QuantityMeasurement(Unit.MILLILITRE, 0.0);
+        boolean nullCheck = Objects.nonNull(millilitre);
+        Assert.assertTrue(nullCheck);
+    }
+
+
 
 }

@@ -798,4 +798,66 @@ public class QuantityMeasurementTest {
         Assert.assertEquals(1001.0, sum, 0.0);
     }
 
+    @Test
+    public void given2Temperature_whenOfTypeCelsiusAndBothHasValueZero_shouldBeEqual() {
+        QuantityMeasurement celsius1 = new QuantityMeasurement(Unit.CELSIUS, 0.0);
+        QuantityMeasurement celsius2 = new QuantityMeasurement(Unit.CELSIUS, 0.0);
+        Assert.assertEquals(celsius1, celsius2);
+    }
+
+    @Test
+    public void given2Temperature_whenOfTypeCelsiusAndBothHasValueZeroAndOne_shouldBeUnequal() {
+        QuantityMeasurement celsius1 = new QuantityMeasurement(Unit.CELSIUS, 0.0);
+        QuantityMeasurement celsius2 = new QuantityMeasurement(Unit.CELSIUS, 1.0);
+        Assert.assertNotEquals(celsius1, celsius2);
+    }
+
+    @Test
+    public void  given2Temperature_whenOfTypeCelsiusAndBothHasValueZeroAndNull_shouldBeUnequal() {
+        QuantityMeasurement celsius1 = new QuantityMeasurement(Unit.CELSIUS, 0.0);
+        QuantityMeasurement celsius2 =null;
+        Assert.assertNotEquals(celsius1, celsius2);
+    }
+
+    @Test
+    public void  given1Temperature_whenOfTypeCelsiusAndHasValueNull_shouldReturnTrue() {
+        QuantityMeasurement celsius = null;
+        boolean nullCheck = Objects.isNull(celsius);
+        Assert.assertTrue(nullCheck);
+    }
+
+    @Test
+    public void  given1Temperature_whenOfTypeCelsiusAndHasValueNotNull_shouldReturnTrue() {
+        QuantityMeasurement celsius = new QuantityMeasurement(Unit.CELSIUS, 0.0);
+        boolean nullCheck = Objects.nonNull(celsius);
+        Assert.assertTrue(nullCheck);
+    }
+
+    @Test
+    public void  given2Temperature_whenOfTypeCelsiusAndBothHasSameReference_shouldBeEqual() {
+        QuantityMeasurement celsius1 = new QuantityMeasurement(Unit.CELSIUS, 0.0);
+        QuantityMeasurement celsius2 = celsius1;
+        Assert.assertSame(celsius1, celsius2);
+    }
+
+    @Test
+    public void  given2Temperature_whenOfTypeCelsiusAndBothHasDifferentReference_shouldBeUnequal() {
+        QuantityMeasurement celsius1 = new QuantityMeasurement(Unit.CELSIUS, 0.0);
+        QuantityMeasurement celsius2 = new QuantityMeasurement(Unit.CELSIUS, 1.0);
+        Assert.assertNotSame(celsius1, celsius2);
+    }
+
+    @Test
+    public void given2Temperature_whenHasSameTypesCelsius_shouldBeEqual() {
+        QuantityMeasurement celsius1 = new QuantityMeasurement(Unit.CELSIUS, 0.0);
+        QuantityMeasurement celsius2 = new QuantityMeasurement(Unit.CELSIUS, 1.0);
+        Assert.assertEquals(celsius1.getClass(), celsius2.getClass());
+    }
+
+    @Test
+    public void given2Temperature_whenHasDifferentTypesCelsisus_shouldBeUnequal() {
+        QuantityMeasurement celsius = new QuantityMeasurement(Unit.CELSIUS, 0.0);
+        Integer int1 = 0;
+        Assert.assertNotEquals(celsius.getClass(), int1.getClass());
+    }
 }

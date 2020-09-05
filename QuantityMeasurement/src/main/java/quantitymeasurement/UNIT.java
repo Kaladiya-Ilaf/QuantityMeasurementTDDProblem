@@ -10,7 +10,7 @@ enum Unit {
     MILLILITRE(UnitType.VOLUME, 0.001),
     KILOGRAM(UnitType.WEIGHT, 1),
     GRAM(UnitType.WEIGHT, 0.001),
-    TONNE(UnitType.WEIGHT, 1000);
+    TONNE(UnitType.WEIGHT, 1000), CELSIUS(UnitType.TEMPERATURE, 1);
 
     public final double baseUnit;
     UnitType unitType;

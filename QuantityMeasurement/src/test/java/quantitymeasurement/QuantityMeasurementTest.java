@@ -377,5 +377,26 @@ public class QuantityMeasurementTest {
         Assert.assertNotEquals(gallon1, gallon2);
     }
 
+    @Test
+    public void  given2Volume_whenOfTypeGallonsAndBothHasValueZeroAndNull_shouldBeUnequal() {
+        QuantityMeasurement gallon1 = new QuantityMeasurement(Unit.GALLON, 0.0);
+        QuantityMeasurement gallon2 =null;
+        Assert.assertNotEquals(gallon1, gallon2);
+    }
+
+    @Test
+    public void  given1Volume_whenOfTypeGallonAndHasValueNull_shouldReturnTrue() {
+        QuantityMeasurement gallon = null;
+        boolean nullCheck = Objects.isNull(gallon);
+        Assert.assertTrue(nullCheck);
+    }
+
+    @Test
+    public void  given1Volume_whenOfTypeGallonAndHasValueNotNull_shouldReturnTrue() {
+        QuantityMeasurement gallon = new QuantityMeasurement(Unit.GALLON, 0.0);
+        boolean nullCheck = Objects.nonNull(gallon);
+        Assert.assertTrue(nullCheck);
+    }
+
 
 }

@@ -176,6 +176,22 @@ public class QuantityMeasurementTest {
         Assert.assertTrue(nullCheck);
     }
 
+    @Test
+    public void  given2Lengths_whenOfTypeYardAndBothHasSameReference_shouldBeEqual() {
+        QuantityMeasurement yard1 = new QuantityMeasurement(Unit.YARD, 0.0);
+        QuantityMeasurement yard2 = yard1;
+        Assert.assertSame(yard1, yard2);
+    }
+
+    @Test
+    public void  given2Lengths_whenOfTypeYardAndBothHasDifferentReference_shouldBeUnequal() {
+        QuantityMeasurement yard1 = new QuantityMeasurement(Unit.YARD, 0.0);
+        QuantityMeasurement yard2 = new QuantityMeasurement(Unit.YARD, 1.0);
+        Assert.assertNotSame(yard1, yard2);
+    }
+
+
+
 
 
 

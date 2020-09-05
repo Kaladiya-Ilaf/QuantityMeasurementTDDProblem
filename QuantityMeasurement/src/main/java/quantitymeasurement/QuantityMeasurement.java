@@ -32,4 +32,8 @@ public class QuantityMeasurement {
             return this.equals(thatUnit);
         return Double.compare(this.unit.convertToUnit(this.value), thatUnit.unit.convertToUnit(thatUnit.value)) == 0;
     }
+
+    public double add(QuantityMeasurement thatUnit) {
+        return this.unit.convertToUnit(this.value) + thatUnit.unit.convertToUnit(thatUnit.value);
+    }
 }

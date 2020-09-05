@@ -330,4 +330,36 @@ public class QuantityMeasurementTest {
         boolean compareCheck = centimeter.compareUnits(inch);
         Assert.assertTrue(compareCheck);
     }
+
+    @Test
+    public void given2Lenghts_whenOfTypeInchesBothWithValue2_shouldAdditionInInches() {
+        QuantityMeasurement inch1 = new QuantityMeasurement(Unit.INCH, 2);
+        QuantityMeasurement inch2 = new QuantityMeasurement(Unit.INCH, 2);
+        double sum = inch1.add(inch2);
+        Assert.assertEquals(4.0, sum, 0.0);
+    }
+
+    @Test
+    public void given2Lenghts_when1OfTypeFeetWithValue1And1OfTypeInchWithValue2_shouldAdditionInInches() {
+        QuantityMeasurement feet = new QuantityMeasurement(Unit.FEET, 1);
+        QuantityMeasurement inch = new QuantityMeasurement(Unit.INCH, 2);
+        double sum = feet.add(inch);
+        Assert.assertEquals(14.0, sum, 0.0);
+    }
+
+    @Test
+    public void given2Lenghts_whenBothOfTypeFeetWithValue1ForBoth_shouldAdditionInInches() {
+        QuantityMeasurement feet1 = new QuantityMeasurement(Unit.FEET, 1);
+        QuantityMeasurement feet2 = new QuantityMeasurement(Unit.FEET, 1);
+        double sum = feet1.add(feet2);
+        Assert.assertEquals(24.0, sum, 0.0);
+    }
+
+    @Test
+    public void given2Lenghts_when1OfTypeInchWithValue2And1OfTypeCentimeterWithValue2AndHalf_shouldAdditionInInches() {
+        QuantityMeasurement centimeter = new QuantityMeasurement(Unit.CENTIMETER, 2.5);
+        QuantityMeasurement inch = new QuantityMeasurement(Unit.INCH, 2);
+        double sum = centimeter.add(inch);
+        Assert.assertEquals(3.0, sum, 0.0);
+    }
 }

@@ -132,4 +132,11 @@ public class QuantityMeasurementTest {
         Assert.assertNotEquals(inch1.getClass(), int1.getClass());
     }
 
+    @Test
+    public void given2Lengths_whenHasDifferentTypesInchAndFeet_shouldBeUnequal() {
+        Inch inch1 = new Inch(0.0);
+        Feet feet1 = new Feet(0.0);
+        Assert.assertNotEquals(inch1.getClass(), feet1.getClass());
+    }
+
 }

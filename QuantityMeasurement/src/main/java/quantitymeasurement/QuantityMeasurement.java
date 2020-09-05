@@ -25,7 +25,7 @@ public class QuantityMeasurement {
         return Objects.hash(value);
     }
 
-    public boolean compare(QuantityMeasurement thatUnit) {
+    public boolean compareUnits(QuantityMeasurement thatUnit) {
         if (this.unit.getClass() != thatUnit.unit.getClass())
             return false;
         if (this.unit.equals(thatUnit))

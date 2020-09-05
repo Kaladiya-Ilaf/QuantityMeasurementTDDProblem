@@ -137,7 +137,7 @@ public class QuantityMeasurementTest {
     public void given2Lenghts_when1InchWithValue12And1FeetWithValue1_shouldReturnTrue() {
         QuantityMeasurement feet = new QuantityMeasurement(Unit.FEET, 1);
         QuantityMeasurement inch = new QuantityMeasurement(Unit.INCH, 12);
-        boolean compareCheck = feet.compare(inch);
+        boolean compareCheck = feet.compareUnits(inch);
         Assert.assertTrue(compareCheck);
     }
 
@@ -208,7 +208,7 @@ public class QuantityMeasurementTest {
     public void given2Lenghts_when1YardWithValue1And1FeetWithValue3_shouldReturnTrue() {
         QuantityMeasurement feet = new QuantityMeasurement(Unit.FEET, 3);
         QuantityMeasurement yard = new QuantityMeasurement(Unit.YARD, 1);
-        boolean compareCheck = feet.compare(yard);
+        boolean compareCheck = feet.compareUnits(yard);
         Assert.assertTrue(compareCheck);
     }
 }

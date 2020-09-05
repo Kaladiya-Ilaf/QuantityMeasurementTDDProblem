@@ -3,13 +3,17 @@ package quantitymeasurement;
 import java.util.Objects;
 
 public class QuantityMeasurement {
-    private final Unit unit;
 
-    private final double value;
+    public final double value;
+    public Unit unit;
+    private Compare compare;
+    private AddQuantity add;
 
     public QuantityMeasurement(Unit unit, double value) {
         this.unit = unit;
         this.value = value;
+        compare = new Compare();
+        add = new AddQuantity();
     }
 
     @Override
@@ -25,15 +29,14 @@ public class QuantityMeasurement {
         return Objects.hash(value);
     }
 
-    public boolean compareUnits(QuantityMeasurement thatUnit) {
-        if (this.unit.getClass() != thatUnit.unit.getClass())
-            return false;
-        if (this.unit.equals(thatUnit))
-            return this.equals(thatUnit);
-        return Double.compare(this.unit.convertToUnit(this.value), thatUnit.unit.convertToUnit(thatUnit.value)) == 0;
+
+    public  boolean compareUnits(QuantityMeasurement comparator1, QuantityMeasurement comparator2)
+    {
+        return compare.compareTo(comparator1,comparator2);
     }
 
-    public double add(QuantityMeasurement thatUnit) {
-        return this.unit.convertToUnit(this.value) + thatUnit.unit.convertToUnit(thatUnit.value);
+    public double add(QuantityMeasurement comparator1, QuantityMeasurement comparator2)
+    {
+        return add.AddQuantities(comparator1,comparator2);
     }
 }

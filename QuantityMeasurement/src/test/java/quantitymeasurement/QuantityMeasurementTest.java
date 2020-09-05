@@ -137,7 +137,7 @@ public class QuantityMeasurementTest {
     public void given2Lenghts_when1OfTypeInchWithValue12And1OfTypeFeetWithValue1_shouldReturnTrue() {
         QuantityMeasurement feet = new QuantityMeasurement(Unit.FEET, 1);
         QuantityMeasurement inch = new QuantityMeasurement(Unit.INCH, 12);
-        boolean compareCheck = feet.compareUnits(inch);
+        boolean compareCheck = feet.compareUnits(feet, inch);
         Assert.assertTrue(compareCheck);
     }
 
@@ -208,7 +208,7 @@ public class QuantityMeasurementTest {
     public void given2Lenghts_when1OfTypeYardWithValue1And1OfTypeFeetWithValue3_shouldReturnTrue() {
         QuantityMeasurement feet = new QuantityMeasurement(Unit.FEET, 3);
         QuantityMeasurement yard = new QuantityMeasurement(Unit.YARD, 1);
-        boolean compareCheck = feet.compareUnits(yard);
+        boolean compareCheck = feet.compareUnits(feet, yard);
         Assert.assertTrue(compareCheck);
     }
 
@@ -216,7 +216,7 @@ public class QuantityMeasurementTest {
     public void given2Lenghts_when1OfTypeYardWithValue1And1OfTypeFeetWithValue1_shouldReturnFalse() {
         QuantityMeasurement feet = new QuantityMeasurement(Unit.FEET, 1);
         QuantityMeasurement yard = new QuantityMeasurement(Unit.YARD, 1);
-        boolean compareCheck = feet.compareUnits(yard);
+        boolean compareCheck = feet.compareUnits(feet, yard);
         Assert.assertFalse(compareCheck);
     }
 
@@ -224,7 +224,7 @@ public class QuantityMeasurementTest {
     public void given2Lenghts_when1OfTypeYardWithValue1And1OfTypeInchWithValue1_shouldReturnFalse() {
         QuantityMeasurement inch = new QuantityMeasurement(Unit.INCH, 1);
         QuantityMeasurement yard = new QuantityMeasurement(Unit.YARD, 1);
-        boolean compareCheck = inch.compareUnits(yard);
+        boolean compareCheck = inch.compareUnits(inch, yard);
         Assert.assertFalse(compareCheck);
     }
 
@@ -232,7 +232,7 @@ public class QuantityMeasurementTest {
     public void given2Lenghts_when1OfTypeYardWithValue1And1OfTypeInchWithValue36_shouldReturnFalse() {
         QuantityMeasurement inch = new QuantityMeasurement(Unit.INCH, 36);
         QuantityMeasurement yard = new QuantityMeasurement(Unit.YARD, 1);
-        boolean compareCheck = yard.compareUnits(inch);
+        boolean compareCheck = yard.compareUnits(yard, inch);
         Assert.assertTrue(compareCheck);
     }
 
@@ -240,7 +240,7 @@ public class QuantityMeasurementTest {
     public void given2Lenghts_when1OfTypeInchWithValue36And1OfTypeYardWithValue1_shouldReturnFalse() {
         QuantityMeasurement inch = new QuantityMeasurement(Unit.INCH, 36);
         QuantityMeasurement yard = new QuantityMeasurement(Unit.YARD, 1);
-        boolean compareCheck = inch.compareUnits(yard);
+        boolean compareCheck = inch.compareUnits(inch, yard);
         Assert.assertTrue(compareCheck);
     }
 
@@ -248,7 +248,7 @@ public class QuantityMeasurementTest {
     public void given2Lenghts_when1OfTypeFeetWithValue3And1OfTypeYardWithValue1_shouldReturnTrue() {
         QuantityMeasurement feet = new QuantityMeasurement(Unit.FEET, 3);
         QuantityMeasurement yard = new QuantityMeasurement(Unit.YARD, 1);
-        boolean compareCheck = yard.compareUnits(feet);
+        boolean compareCheck = yard.compareUnits(yard, feet);
         Assert.assertTrue(compareCheck);
     }
 
@@ -319,7 +319,7 @@ public class QuantityMeasurementTest {
     public void given2Lenghts_when1OfTypeInchWithValue2And1OfTypeCentimeterWithValue5_shouldReturnFalse() {
         QuantityMeasurement inch = new QuantityMeasurement(Unit.INCH, 2);
         QuantityMeasurement centimeter = new QuantityMeasurement(Unit.CENTIMETER, 5);
-        boolean compareCheck = inch.compareUnits(centimeter);
+        boolean compareCheck = inch.compareUnits(inch, centimeter);
         Assert.assertTrue(compareCheck);
     }
 
@@ -327,7 +327,7 @@ public class QuantityMeasurementTest {
     public void given2Lenghts_when1OfTypeCentimeterWithValue5And1OfTypeInchWithValue2_shouldReturnFalse() {
         QuantityMeasurement inch = new QuantityMeasurement(Unit.INCH, 2);
         QuantityMeasurement centimeter = new QuantityMeasurement(Unit.CENTIMETER, 5);
-        boolean compareCheck = centimeter.compareUnits(inch);
+        boolean compareCheck = centimeter.compareUnits(centimeter, inch);
         Assert.assertTrue(compareCheck);
     }
 
@@ -335,7 +335,7 @@ public class QuantityMeasurementTest {
     public void given2Lenghts_whenOfTypeInchesBothWithValue2_shouldAdditionInInches() {
         QuantityMeasurement inch1 = new QuantityMeasurement(Unit.INCH, 2);
         QuantityMeasurement inch2 = new QuantityMeasurement(Unit.INCH, 2);
-        double sum = inch1.add(inch2);
+        double sum = inch1.add(inch1, inch2);
         Assert.assertEquals(4.0, sum, 0.0);
     }
 
@@ -343,7 +343,7 @@ public class QuantityMeasurementTest {
     public void given2Lenghts_when1OfTypeFeetWithValue1And1OfTypeInchWithValue2_shouldAdditionInInches() {
         QuantityMeasurement feet = new QuantityMeasurement(Unit.FEET, 1);
         QuantityMeasurement inch = new QuantityMeasurement(Unit.INCH, 2);
-        double sum = feet.add(inch);
+        double sum = feet.add(feet, inch);
         Assert.assertEquals(14.0, sum, 0.0);
     }
 
@@ -351,7 +351,7 @@ public class QuantityMeasurementTest {
     public void given2Lenghts_whenBothOfTypeFeetWithValue1ForBoth_shouldAdditionInInches() {
         QuantityMeasurement feet1 = new QuantityMeasurement(Unit.FEET, 1);
         QuantityMeasurement feet2 = new QuantityMeasurement(Unit.FEET, 1);
-        double sum = feet1.add(feet2);
+        double sum = feet1.add(feet1, feet2);
         Assert.assertEquals(24.0, sum, 0.0);
     }
 
@@ -359,7 +359,7 @@ public class QuantityMeasurementTest {
     public void given2Lenghts_when1OfTypeInchWithValue2And1OfTypeCentimeterWithValue2AndHalf_shouldAdditionInInches() {
         QuantityMeasurement centimeter = new QuantityMeasurement(Unit.CENTIMETER, 2.5);
         QuantityMeasurement inch = new QuantityMeasurement(Unit.INCH, 2);
-        double sum = centimeter.add(inch);
+        double sum = centimeter.add(centimeter, inch);
         Assert.assertEquals(3.0, sum, 0.0);
     }
 }

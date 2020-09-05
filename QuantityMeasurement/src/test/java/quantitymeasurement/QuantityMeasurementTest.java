@@ -439,5 +439,25 @@ public class QuantityMeasurementTest {
         Assert.assertNotEquals(litre1, litre2);
     }
 
+    @Test
+    public void  given2Volume_whenOfTypeLitreAndBothHasValueZeroAndNull_shouldBeUnequal() {
+        QuantityMeasurement litre1 = new QuantityMeasurement(Unit.LITRE, 0.0);
+        QuantityMeasurement litre2 =null;
+        Assert.assertNotEquals(litre1, litre2);
+    }
+
+    @Test
+    public void  given1Volume_whenOfTypeLitreAndHasValueNull_shouldReturnTrue() {
+        QuantityMeasurement litre = null;
+        boolean nullCheck = Objects.isNull(litre);
+        Assert.assertTrue(nullCheck);
+    }
+
+    @Test
+    public void  given1Volume_whenOfTypeLitreAndHasValueNotNull_shouldReturnTrue() {
+        QuantityMeasurement litre = new QuantityMeasurement(Unit.LITRE, 0.0);
+        boolean nullCheck = Objects.nonNull(litre);
+        Assert.assertTrue(nullCheck);
+    }
 
 }

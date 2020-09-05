@@ -134,7 +134,7 @@ public class QuantityMeasurementTest {
     }
 
     @Test
-    public void given2Lenghts_when1InchWithValue12And1FeetWithValue1_shouldReturnTrue() {
+    public void given2Lenghts_when1OfTypeInchWithValue12And1OfTypeFeetWithValue1_shouldReturnTrue() {
         QuantityMeasurement feet = new QuantityMeasurement(Unit.FEET, 1);
         QuantityMeasurement inch = new QuantityMeasurement(Unit.INCH, 12);
         boolean compareCheck = feet.compareUnits(inch);
@@ -205,7 +205,7 @@ public class QuantityMeasurementTest {
     }
 
     @Test
-    public void given2Lenghts_when1YardWithValue1And1FeetWithValue3_shouldReturnTrue() {
+    public void given2Lenghts_when1OfTypeYardWithValue1And1OfTypeFeetWithValue3_shouldReturnTrue() {
         QuantityMeasurement feet = new QuantityMeasurement(Unit.FEET, 3);
         QuantityMeasurement yard = new QuantityMeasurement(Unit.YARD, 1);
         boolean compareCheck = feet.compareUnits(yard);
@@ -213,7 +213,7 @@ public class QuantityMeasurementTest {
     }
 
     @Test
-    public void given2Lenghts_when1YardWithValue1And1FeetWithValue1_shouldReturnFalse() {
+    public void given2Lenghts_when1OfTypeYardWithValue1And1OfTypeFeetWithValue1_shouldReturnFalse() {
         QuantityMeasurement feet = new QuantityMeasurement(Unit.FEET, 1);
         QuantityMeasurement yard = new QuantityMeasurement(Unit.YARD, 1);
         boolean compareCheck = feet.compareUnits(yard);
@@ -221,7 +221,7 @@ public class QuantityMeasurementTest {
     }
 
     @Test
-    public void given2Lenghts_when1YardWithValue1And1InchWithValue1_shouldReturnFalse() {
+    public void given2Lenghts_when1OfTypeYardWithValue1And1OfTypeInchWithValue1_shouldReturnFalse() {
         QuantityMeasurement inch = new QuantityMeasurement(Unit.INCH, 1);
         QuantityMeasurement yard = new QuantityMeasurement(Unit.YARD, 1);
         boolean compareCheck = inch.compareUnits(yard);
@@ -229,7 +229,7 @@ public class QuantityMeasurementTest {
     }
 
     @Test
-    public void given2Lenghts_when1YardWithValue1And1InchWithValue36_shouldReturnFalse() {
+    public void given2Lenghts_when1OfTypeYardWithValue1And1OfTypeInchWithValue36_shouldReturnFalse() {
         QuantityMeasurement inch = new QuantityMeasurement(Unit.INCH, 36);
         QuantityMeasurement yard = new QuantityMeasurement(Unit.YARD, 1);
         boolean compareCheck = yard.compareUnits(inch);
@@ -237,7 +237,7 @@ public class QuantityMeasurementTest {
     }
 
     @Test
-    public void given2Lenghts_when1InchWithValue36And1YardWithValue1_shouldReturnFalse() {
+    public void given2Lenghts_when1OfTypeInchWithValue36And1OfTypeYardWithValue1_shouldReturnFalse() {
         QuantityMeasurement inch = new QuantityMeasurement(Unit.INCH, 36);
         QuantityMeasurement yard = new QuantityMeasurement(Unit.YARD, 1);
         boolean compareCheck = inch.compareUnits(yard);
@@ -245,7 +245,7 @@ public class QuantityMeasurementTest {
     }
 
     @Test
-    public void given2Lenghts_when1FeetWithValue3And1YardWithValue1_shouldReturnTrue() {
+    public void given2Lenghts_when1OfTypeFeetWithValue3And1OfTypeYardWithValue1_shouldReturnTrue() {
         QuantityMeasurement feet = new QuantityMeasurement(Unit.FEET, 3);
         QuantityMeasurement yard = new QuantityMeasurement(Unit.YARD, 1);
         boolean compareCheck = yard.compareUnits(feet);

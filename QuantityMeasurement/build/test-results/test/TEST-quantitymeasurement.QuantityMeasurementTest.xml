@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="quantitymeasurement.QuantityMeasurementTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-09-05T06:42:52" hostname="ilaf-Inspiron-15-3567" time="0.005">
+<testsuite name="quantitymeasurement.QuantityMeasurementTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-09-05T06:50:07" hostname="ilaf-Inspiron-15-3567" time="0.004">
   <properties/>
-  <testcase name="given2Volumes_when1OfTypeLitreWithValue1And1OfTypeMiilliLitreWithValue1000_shouldRetrunAdditionInLitres" classname="quantitymeasurement.QuantityMeasurementTest" time="0.005"/>
+  <testcase name="given2Weights_whenOfTypeKilogramAndBothHasValueZeroAndOne_shouldBeUnequal" classname="quantitymeasurement.QuantityMeasurementTest" time="0.004"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

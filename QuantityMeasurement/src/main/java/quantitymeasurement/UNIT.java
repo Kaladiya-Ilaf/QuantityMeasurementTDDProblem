@@ -7,7 +7,7 @@ enum Unit {
     CENTIMETER(UnitType.LENGTH, 0.4),
     GALLON(UnitType.VOLUME, 3.78),
     LITRE(UnitType.VOLUME,1),
-    MILLILITRE(UnitType.VOLUME, 0.001);
+    MILLILITRE(UnitType.VOLUME, 0.001), KILOGRAM(UnitType.WEIGHT, 1);
 
     public final double baseUnit;
     UnitType unitType;

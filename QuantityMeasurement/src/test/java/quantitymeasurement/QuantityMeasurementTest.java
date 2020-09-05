@@ -583,4 +583,40 @@ public class QuantityMeasurementTest {
         double sum = litre.add(litre, millilitre);
         Assert.assertEquals(2.0, sum, 0.0);
     }
+
+    @Test
+    public void given2Weights_whenOfTypeKilogramAndBothHasValueZero_shouldBeEqual() {
+        QuantityMeasurement kilogram1 = new QuantityMeasurement(Unit.KILOGRAM, 0.0);
+        QuantityMeasurement kilogram2 = new QuantityMeasurement(Unit.KILOGRAM, 0.0);
+        Assert.assertEquals(kilogram1, kilogram2);
+    }
+
+    @Test
+    public void given2Weights_whenOfTypeKilogramAndBothHasValueZeroAndOne_shouldBeUnequal() {
+        QuantityMeasurement killogram1 = new QuantityMeasurement(Unit.KILOGRAM, 0.0);
+        QuantityMeasurement killograma2 = new QuantityMeasurement(Unit.KILOGRAM, 1.0);
+        Assert.assertNotEquals(killogram1, killograma2);
+    }
+
+    @Test
+    public void  given2Weights_whenOfTypeKillogramsAndBothHasValueZeroAndNull_shouldBeUnequal() {
+        QuantityMeasurement kilogram1 = new QuantityMeasurement(Unit.KILOGRAM, 0.0);
+        QuantityMeasurement kilogram2 =null;
+        Assert.assertNotEquals(kilogram1, kilogram2);
+    }
+
+    @Test
+    public void  given1Weight_whenOfTypeKilogramAndHasValueNull_shouldReturnTrue() {
+        QuantityMeasurement kilogram = null;
+        boolean nullCheck = Objects.isNull(kilogram);
+        Assert.assertTrue(nullCheck);
+    }
+
+    @Test
+    public void  given1Weight_whenOfTypeKilogramAndHasValueNotNull_shouldReturnTrue() {
+        QuantityMeasurement kilogram = new QuantityMeasurement(Unit.KILOGRAM, 0.0);
+        boolean nullCheck = Objects.nonNull(kilogram);
+        Assert.assertTrue(nullCheck);
+    }
+
 }

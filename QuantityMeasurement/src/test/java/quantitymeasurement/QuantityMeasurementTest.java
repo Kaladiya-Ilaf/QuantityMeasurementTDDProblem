@@ -190,9 +190,17 @@ public class QuantityMeasurementTest {
         Assert.assertNotSame(yard1, yard2);
     }
 
+    @Test
+    public void given2Lengths_whenHasSameTypesYard_shouldBeEqual() {
+        QuantityMeasurement yard1 = new QuantityMeasurement(Unit.YARD, 0.0);
+        QuantityMeasurement yard2 = new QuantityMeasurement(Unit.YARD, 0.0);
+        Assert.assertEquals(yard1.getClass(), yard2.getClass());
+    }
 
-
-
-
-
+    @Test
+    public void given2Lengths_whenHasDifferentTypesYard_shouldBeUnequal() {
+        QuantityMeasurement yard1 = new QuantityMeasurement(Unit.YARD, 0.0);
+        Integer int1 = 0;
+        Assert.assertNotEquals(yard1.getClass(), int1.getClass());
+    }
 }

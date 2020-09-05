@@ -133,4 +133,11 @@ public class QuantityMeasurementTest {
         Assert.assertNotEquals(inch1.getClass(), int1.getClass());
     }
 
+    @Test
+    public void given2Lenghts_when1InchWithValue12And1FeetWithValue1_shouldReturnTrue() {
+        QuantityMeasurement feet = new QuantityMeasurement(Unit.FEET, 1);
+        QuantityMeasurement inch = new QuantityMeasurement(Unit.INCH, 12);
+        boolean compareCheck = feet.compare(inch);
+        Assert.assertTrue(compareCheck);
+    }
 }

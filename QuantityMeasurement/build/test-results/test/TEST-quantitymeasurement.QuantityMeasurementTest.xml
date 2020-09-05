@@ -1,24 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="quantitymeasurement.QuantityMeasurementTest" tests="18" skipped="0" failures="0" errors="0" timestamp="2020-09-05T01:36:55" hostname="ilaf-Inspiron-15-3567" time="0.022">
+<testsuite name="quantitymeasurement.QuantityMeasurementTest" tests="1" skipped="1" failures="0" errors="0" timestamp="2020-09-05T02:01:32" hostname="ilaf-Inspiron-15-3567" time="19.103">
   <properties/>
-  <testcase name="given2Lengths_whenOfTypeInchAndBothHasSameReference_shouldBeEqual" classname="quantitymeasurement.QuantityMeasurementTest" time="0.002"/>
-  <testcase name="given2Lengths_whenHasSameTypesInch_shouldBeEqual" classname="quantitymeasurement.QuantityMeasurementTest" time="0.001"/>
-  <testcase name="given1Length_whenOfTypeInchAndHasValueNotNull_shouldReturnTrue" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
-  <testcase name="given2Lengths_whenHasDifferentTypes_shouldBeUnequal" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
-  <testcase name="given2Lengths_whenOfTypeFeetAndBothHasValueZero_shouldBeEqual" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
-  <testcase name="given1Length_whenOfTypeInchAndHasValueNull_shouldReturnTrue" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
-  <testcase name="given2Lengths_whenOfTypeFeetAndBothHasDifferentReference_shouldBeUnequal" classname="quantitymeasurement.QuantityMeasurementTest" time="0.001"/>
-  <testcase name="given2Lengths_whenOfTypeFeetAndBothHasValueZeroAndNull_shouldBeUnequal" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
-  <testcase name="given2Lengths_whenOfTypeFeetAndBothHasValueZeroAndOne_shouldBeUnequal" classname="quantitymeasurement.QuantityMeasurementTest" time="0.001"/>
-  <testcase name="given2Lengths_whenOfTypeInchAndBothHasDifferentReference_shouldBeUnequal" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
-  <testcase name="given2Lengths_whenHasSameTypes_shouldBeEqual" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
-  <testcase name="given2Lengths_whenOfTypeFeetAndBothHasSameReference_shouldBeEqual" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
-  <testcase name="given2Lengths_whenHasDifferentTypesInchAndInteger_shouldBeUnequal" classname="quantitymeasurement.QuantityMeasurementTest" time="0.001"/>
-  <testcase name="given2Lengths_whenOfTypeInchAndBothHasValueZeroAndNull_shouldBeUnequal" classname="quantitymeasurement.QuantityMeasurementTest" time="0.001"/>
-  <testcase name="given1Length_whenOfTypeFeetAndHasValueNull_shouldReturnTrue" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
-  <testcase name="given2Lengths_whenOfTypeInchAndBothHasValueZeroAndOne_shouldBeUnequal" classname="quantitymeasurement.QuantityMeasurementTest" time="0.001"/>
-  <testcase name="given2Lengths_whenOfTypeInchAndBothHasValueZero_shouldBeEqual" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
-  <testcase name="given1Length_whenOfTypeFeetAndHasValueNotNull_shouldReturnTrue" classname="quantitymeasurement.QuantityMeasurementTest" time="0.001"/>
+  <testcase name="given2Lenghts_when1InchWithValue12And1FeetWithValue1_shouldReturnTrue" classname="quantitymeasurement.QuantityMeasurementTest" time="19.103">
+    <skipped/>
+  </testcase>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

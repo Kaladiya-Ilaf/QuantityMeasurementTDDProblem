@@ -25,4 +25,11 @@ public class QuantityMeasurement {
         return Objects.hash(value);
     }
 
+    public boolean compare(QuantityMeasurement thatUnit) {
+        if (this.unit.getClass() != thatUnit.unit.getClass())
+            return false;
+        if (this.unit.equals(thatUnit))
+            return this.equals(thatUnit);
+        return Double.compare(this.unit.convertToUnit(this.value), thatUnit.unit.convertToUnit(thatUnit.value)) == 0;
+    }
 }

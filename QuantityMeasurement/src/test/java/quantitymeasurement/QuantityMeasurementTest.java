@@ -266,5 +266,28 @@ public class QuantityMeasurementTest {
         Assert.assertNotEquals(cm1, cm2);
     }
 
+    @Test
+    public void  given2Lengths_whenOfTypeCentimeterAndBothHasValueZeroAndNull_shouldBeUnequal() {
+        QuantityMeasurement cm1 = new QuantityMeasurement(Unit.CENTIMETER, 0.0);
+        QuantityMeasurement cm2 =null;
+        Assert.assertNotEquals(cm1, cm2);
+    }
+
+    @Test
+    public void  given1Length_whenOfTypeCenAndHasValueNull_shouldReturnTrue() {
+        QuantityMeasurement cm1 = null;
+        boolean nullCheck = Objects.isNull(cm1);
+        Assert.assertTrue(nullCheck);
+    }
+
+    @Test
+    public void  given1Length_whenOfTypeCentimeterAndHasValueNotNull_shouldReturnTrue() {
+        QuantityMeasurement cm1 = new QuantityMeasurement(Unit.CENTIMETER, 0.0);
+        boolean nullCheck = Objects.nonNull(cm1);
+        Assert.assertTrue(nullCheck);
+    }
+
+
+
 
 }

@@ -860,4 +860,77 @@ public class QuantityMeasurementTest {
         Integer int1 = 0;
         Assert.assertNotEquals(celsius.getClass(), int1.getClass());
     }
+
+
+    @Test
+    public void given2Temperature_whenOfTypeFahrenheitAndBothHasValueZero_shouldBeEqual() {
+        QuantityMeasurement fahrenheit1 = new QuantityMeasurement(Unit.FAHRENHEIT, 0.0);
+        QuantityMeasurement fahrenheit2 = new QuantityMeasurement(Unit.FAHRENHEIT, 0.0);
+        Assert.assertEquals(fahrenheit1, fahrenheit2);
+    }
+
+    @Test
+    public void given2Temperature_whenOfTypeFahrenheitAndBothHasValueZeroAndOne_shouldBeUnequal() {
+        QuantityMeasurement fahrenheit1 = new QuantityMeasurement(Unit.FAHRENHEIT, 0.0);
+        QuantityMeasurement fahrenheit2 = new QuantityMeasurement(Unit.FAHRENHEIT, 1.0);
+        Assert.assertNotEquals(fahrenheit1, fahrenheit2);
+    }
+
+    @Test
+    public void  given2Temperature_whenOfTypeFahrenheitAndBothHasValueZeroAndNull_shouldBeUnequal() {
+        QuantityMeasurement fahrenheit1 = new QuantityMeasurement(Unit.FAHRENHEIT, 0.0);
+        QuantityMeasurement fahrenheit2 = null;
+        Assert.assertNotEquals(fahrenheit1, fahrenheit2);
+    }
+
+    @Test
+    public void  given1Temperature_whenOfTypeFahrenheitAndHasValueNull_shouldReturnTrue() {
+        QuantityMeasurement fahrenheit = null;
+        boolean nullCheck = Objects.isNull(fahrenheit);
+        Assert.assertTrue(nullCheck);
+    }
+
+    @Test
+    public void  given1Temperature_whenOfTypeFahrenheitAndHasValueNotNull_shouldReturnTrue() {
+        QuantityMeasurement fahrenheit = new QuantityMeasurement(Unit.FAHRENHEIT, 0.0);
+        boolean nullCheck = Objects.nonNull(fahrenheit);
+        Assert.assertTrue(nullCheck);
+    }
+
+    @Test
+    public void  given2Temperature_whenOfTypeFahrenhheitAndBothHasSameReference_shouldBeEqual() {
+        QuantityMeasurement fahrenheit1 = new QuantityMeasurement(Unit.FAHRENHEIT, 0.0);
+        QuantityMeasurement fahrenheit2 = fahrenheit1;
+        Assert.assertSame(fahrenheit1, fahrenheit2);
+    }
+
+    @Test
+    public void  given2Temperature_whenOfTypeFahreinheitAndBothHasDifferentReference_shouldBeUnequal() {
+        QuantityMeasurement fahrenheit1 = new QuantityMeasurement(Unit.FAHRENHEIT, 0.0);
+        QuantityMeasurement fahrenheit2 = new QuantityMeasurement(Unit.FAHRENHEIT, 0.0);
+        Assert.assertNotSame(fahrenheit1, fahrenheit2);
+    }
+
+    @Test
+    public void given2Temperature_whenHasSameTypesFahrenheit_shouldBeEqual() {
+        QuantityMeasurement fahrenheit1 = new QuantityMeasurement(Unit.FAHRENHEIT, 0.0);
+        QuantityMeasurement fahrenheit2 = new QuantityMeasurement(Unit.FAHRENHEIT, 0.0);
+        Assert.assertEquals(fahrenheit1.getClass(), fahrenheit2.getClass());
+    }
+
+    @Test
+    public void given2Temperature_whenHasDifferentTypesFahrenhites_shouldBeUnequal() {
+        QuantityMeasurement fahrenheit = new QuantityMeasurement(Unit.FAHRENHEIT, 0.0);
+        Integer int1 = 0;
+        Assert.assertNotEquals(fahrenheit.getClass(), int1.getClass());
+    }
+
+    @Test
+    public void given2Temperature_when1OfTypeCelsiusWithValue100And1OfTypeFahrenheitWithValue212_shouldReturnTrue() {
+        QuantityMeasurement fahrenheit = new QuantityMeasurement(Unit.FAHRENHEIT, 212);
+        QuantityMeasurement celsius = new QuantityMeasurement(Unit.CELSIUS, 100);
+        boolean compareCheck = celsius.temperatureComparision(celsius, fahrenheit);
+        Assert.assertTrue(compareCheck);
+    }
+
 }

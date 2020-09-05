@@ -33,4 +33,8 @@ public class QuantityMeasurement {
     {
         return add.AddQuantities(comparator1,comparator2);
     }
+
+    public boolean temperatureComparision(QuantityMeasurement comparator1, QuantityMeasurement comparator2){
+        return compare.temperatureComparision(comparator1,comparator2);
+    }
 }

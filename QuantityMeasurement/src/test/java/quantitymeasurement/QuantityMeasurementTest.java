@@ -362,4 +362,20 @@ public class QuantityMeasurementTest {
         double sum = centimeter.add(centimeter, inch);
         Assert.assertEquals(3.0, sum, 0.0);
     }
+
+    @Test
+    public void given2Volumes_whenOfTypeGallonAndBothHasValueZero_shouldBeEqual() {
+        QuantityMeasurement gallon1 = new QuantityMeasurement(Unit.GALLON, 0.0);
+        QuantityMeasurement gallon2 = new QuantityMeasurement(Unit.GALLON, 0.0);
+        Assert.assertEquals(gallon1, gallon2);
+    }
+
+    @Test
+    public void given2VOlumes_whenOfTypeGallonAndBothHasValueZeroAndOne_shouldBeUnequal() {
+        QuantityMeasurement gallon1 = new QuantityMeasurement(Unit.GALLON, 0.0);
+        QuantityMeasurement gallon2 = new QuantityMeasurement(Unit.GALLON, 0.0);
+        Assert.assertNotEquals(gallon1, gallon2);
+    }
+
+
 }

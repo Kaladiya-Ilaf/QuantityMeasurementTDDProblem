@@ -781,4 +781,21 @@ public class QuantityMeasurementTest {
         Assert.assertTrue(compareCheck);
     }
 
+    @Test
+    public void given2Weights_when1OfTypeKilogramWithValue1000And1OfTypeTonneWithValue1_shouldReturnTrue() {
+        QuantityMeasurement kilogram = new QuantityMeasurement(Unit.KILOGRAM, 1000);
+        QuantityMeasurement tonne = new QuantityMeasurement(Unit.TONNE, 1);
+        boolean compareCheck = kilogram.compareUnits(tonne, kilogram);
+        Assert.assertTrue(compareCheck);
+    }
+
+
+    @Test
+    public void given2Weights_when1OfTypeGramWithValue1000And1OfTypeTonneWithValue1_shouldRetrunAdditionInKilogram() {
+        QuantityMeasurement tonne = new QuantityMeasurement(Unit.TONNE, 1);
+        QuantityMeasurement gram = new QuantityMeasurement(Unit.GRAM, 1000);
+        double sum = gram.add(gram, tonne);
+        Assert.assertEquals(1001.0, sum, 0.0);
+    }
+
 }

@@ -155,5 +155,28 @@ public class QuantityMeasurementTest {
         Assert.assertNotEquals(yard1, yard2);
     }
 
+    @Test
+    public void  given2Lengths_whenOfTypeYardAndBothHasValueZeroAndNull_shouldBeUnequal() {
+        QuantityMeasurement yard1 = new QuantityMeasurement(Unit.YARD, 0.0);
+        QuantityMeasurement yard2 =null;
+        Assert.assertNotEquals(yard1, yard2);
+    }
+
+    @Test
+    public void  given1Length_whenOfTypeYardAndHasValueNull_shouldReturnTrue() {
+        QuantityMeasurement yard1 = null;
+        boolean nullCheck = Objects.isNull(yard1);
+        Assert.assertTrue(nullCheck);
+    }
+
+    @Test
+    public void  given1Length_whenOfTypeYardAndHasValueNotNull_shouldReturnTrue() {
+        QuantityMeasurement yard1 = new QuantityMeasurement(Unit.YARD, 0.0);
+        boolean nullCheck = Objects.nonNull(yard1);
+        Assert.assertTrue(nullCheck);
+    }
+
+
+
 
 }

@@ -576,4 +576,11 @@ public class QuantityMeasurementTest {
         Assert.assertEquals(7.56, sum, 0.0);
     }
 
+    @Test
+    public void given2Volumes_when1OfTypeLitreWithValue1And1OfTypeMiilliLitreWithValue1000_shouldRetrunAdditionInLitres() {
+        QuantityMeasurement millilitre = new QuantityMeasurement(Unit.MILLILITRE, 1000);
+        QuantityMeasurement litre = new QuantityMeasurement(Unit.LITRE, 1);
+        double sum = litre.add(litre, millilitre);
+        Assert.assertEquals(2.0, sum, 0.0);
+    }
 }

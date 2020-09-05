@@ -568,5 +568,12 @@ public class QuantityMeasurementTest {
         Assert.assertTrue(compareCheck);
     }
 
+    @Test
+    public void given2Volumes_when1OfTypeGallonWithValue1And1OfTypeLitreWithValue3point78_shouldRetrunAdditionInLitres() {
+        QuantityMeasurement gallon = new QuantityMeasurement(Unit.GALLON, 1);
+        QuantityMeasurement litre = new QuantityMeasurement(Unit.LITRE, 3.78);
+        double sum = gallon.add(gallon, litre);
+        Assert.assertEquals(7.56, sum, 0.0);
+    }
 
 }

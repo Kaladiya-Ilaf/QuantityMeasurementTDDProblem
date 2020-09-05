@@ -397,6 +397,20 @@ public class QuantityMeasurementTest {
         boolean nullCheck = Objects.nonNull(gallon);
         Assert.assertTrue(nullCheck);
     }
+    @Test
+    public void  given2Volumes_whenOfTypeGallonAndBothHasSameReference_shouldBeEqual() {
+        QuantityMeasurement gallon1 = new QuantityMeasurement(Unit.GALLON, 0.0);
+        QuantityMeasurement gallon2 = gallon1;
+        Assert.assertSame(gallon1, gallon2);
+    }
+
+    @Test
+    public void  given2Volumes_whenOfTypeFeetAndBothHasDifferentReference_shouldBeUnequal() {
+        QuantityMeasurement gallon1 = new QuantityMeasurement(Unit.GALLON, 0.0);
+        QuantityMeasurement gallon2 = new QuantityMeasurement(Unit.GALLON, 1.0);
+        Assert.assertNotSame(gallon1, gallon2);
+    }
+
 
 
 }

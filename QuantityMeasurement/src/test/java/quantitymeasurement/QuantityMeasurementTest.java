@@ -523,6 +523,20 @@ public class QuantityMeasurementTest {
         Assert.assertTrue(nullCheck);
     }
 
+    @Test
+    public void  given2Volumes_whenOfTypeMillilitreAndBothHasSameReference_shouldBeEqual() {
+        QuantityMeasurement millilitre1 = new QuantityMeasurement(Unit.MILLILITRE, 0.0);
+        QuantityMeasurement millilitre2 = millilitre1;
+        Assert.assertSame(millilitre1, millilitre2);
+    }
+
+    @Test
+    public void  given2Volumes_whenOfTypeMillilitreAndBothHasDifferentReference_shouldBeUnequal() {
+        QuantityMeasurement millilitre1 = new QuantityMeasurement(Unit.MILLILITRE, 0.0);
+        QuantityMeasurement millilitre2 = new QuantityMeasurement(Unit.MILLILITRE, 1.0);
+        Assert.assertNotSame(millilitre1, millilitre2);
+    }
+
 
 
 }

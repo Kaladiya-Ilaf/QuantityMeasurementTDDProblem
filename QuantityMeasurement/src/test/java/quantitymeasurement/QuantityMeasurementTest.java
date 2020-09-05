@@ -619,4 +619,32 @@ public class QuantityMeasurementTest {
         Assert.assertTrue(nullCheck);
     }
 
+    @Test
+    public void  given2Weights_whenOfTypeKilogramAndBothHasSameReference_shouldBeEqual() {
+        QuantityMeasurement kilogram1 = new QuantityMeasurement(Unit.KILOGRAM, 0.0);
+        QuantityMeasurement kilogram2 = kilogram1;
+        Assert.assertSame(kilogram1, kilogram2);
+    }
+
+    @Test
+    public void  given2Weights_whenOfTypeKilogramAndBothHasDifferentReference_shouldBeUnequal() {
+        QuantityMeasurement killogram1 = new QuantityMeasurement(Unit.KILOGRAM, 0.0);
+        QuantityMeasurement killograma2 = new QuantityMeasurement(Unit.KILOGRAM, 1.0);
+        Assert.assertNotSame(killogram1, killograma2);
+    }
+
+    @Test
+    public void given2Weights_whenHasSameTypesKilograms_shouldBeEqual() {
+        QuantityMeasurement killogram1 = new QuantityMeasurement(Unit.KILOGRAM, 0.0);
+        QuantityMeasurement killograma2 = new QuantityMeasurement(Unit.KILOGRAM, 1.0);
+        Assert.assertEquals(killogram1.getClass(), killograma2.getClass());
+    }
+
+    @Test
+    public void given2Weights_whenHasDifferentTypesKilogram_shouldBeUnequal() {
+        QuantityMeasurement kilogram = new QuantityMeasurement(Unit.KILOGRAM, 0.0);
+        Integer int1 = 0;
+        Assert.assertNotEquals(kilogram.getClass(), int1.getClass());
+    }
+
 }

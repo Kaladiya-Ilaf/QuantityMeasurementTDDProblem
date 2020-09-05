@@ -474,4 +474,18 @@ public class QuantityMeasurementTest {
         Assert.assertNotSame(litre1, litre2);
     }
 
+    @Test
+    public void given2Volume_whenHasSameTypesLitre_shouldBeEqual() {
+        QuantityMeasurement litre1 = new QuantityMeasurement(Unit.LITRE, 0.0);
+        QuantityMeasurement litre2 = new QuantityMeasurement(Unit.LITRE, 1.0);
+        Assert.assertEquals(litre1.getClass(), litre2.getClass());
+    }
+
+    @Test
+    public void given2Volumes_whenHasDifferentTypesLitre_shouldBeUnequal() {
+        QuantityMeasurement litre1 = new QuantityMeasurement(Unit.LITRE, 0.0);
+        Integer int1 = 0;
+        Assert.assertNotEquals(litre1.getClass(), int1.getClass());
+    }
+
 }

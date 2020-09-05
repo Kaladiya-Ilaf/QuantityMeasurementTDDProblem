@@ -373,7 +373,7 @@ public class QuantityMeasurementTest {
     @Test
     public void given2VOlumes_whenOfTypeGallonAndBothHasValueZeroAndOne_shouldBeUnequal() {
         QuantityMeasurement gallon1 = new QuantityMeasurement(Unit.GALLON, 0.0);
-        QuantityMeasurement gallon2 = new QuantityMeasurement(Unit.GALLON, 0.0);
+        QuantityMeasurement gallon2 = new QuantityMeasurement(Unit.GALLON, 1.0);
         Assert.assertNotEquals(gallon1, gallon2);
     }
 
@@ -435,7 +435,7 @@ public class QuantityMeasurementTest {
     @Test
     public void given2VOlumes_whenOfTypeLitreAndBothHasValueZeroAndOne_shouldBeUnequal() {
         QuantityMeasurement litre1 = new QuantityMeasurement(Unit.LITRE, 0.0);
-        QuantityMeasurement litre2 = new QuantityMeasurement(Unit.LITRE, 0.0);
+        QuantityMeasurement litre2 = new QuantityMeasurement(Unit.LITRE, 1.0);
         Assert.assertNotEquals(litre1, litre2);
     }
 
@@ -487,5 +487,20 @@ public class QuantityMeasurementTest {
         Integer int1 = 0;
         Assert.assertNotEquals(litre1.getClass(), int1.getClass());
     }
+
+    @Test
+    public void given2Volumes_whenOfTypeMillilitreAndBothHasValueZero_shouldBeEqual() {
+        QuantityMeasurement millilitre1 = new QuantityMeasurement(Unit.MILLILITRE, 0.0);
+        QuantityMeasurement millilitre2 = new QuantityMeasurement(Unit.MILLILITRE, 0.0);
+        Assert.assertEquals(millilitre1, millilitre2);
+    }
+
+    @Test
+    public void given2VOlumes_whenOfTypeMillilitreAndBothHasValueZeroAndOne_shouldBeUnequal() {
+        QuantityMeasurement millilitre1 = new QuantityMeasurement(Unit.MILLILITRE, 0.0);
+        QuantityMeasurement millilitre2 = new QuantityMeasurement(Unit.MILLILITRE, 1.0);
+        Assert.assertNotEquals(millilitre1, millilitre2);
+    }
+
 
 }

@@ -315,4 +315,19 @@ public class QuantityMeasurementTest {
         Assert.assertNotEquals(cm1.getClass(), int1.getClass());
     }
 
+    @Test
+    public void given2Lenghts_when1OfTypeInchWithValue2And1OfTypeCentimeterWithValue5_shouldReturnFalse() {
+        QuantityMeasurement inch = new QuantityMeasurement(Unit.INCH, 2);
+        QuantityMeasurement centimeter = new QuantityMeasurement(Unit.CENTIMETER, 5);
+        boolean compareCheck = inch.compareUnits(centimeter);
+        Assert.assertTrue(compareCheck);
+    }
+
+    @Test
+    public void given2Lenghts_when1OfTypeCentimeterWithValue5And1OfTypeInchWithValue2_shouldReturnFalse() {
+        QuantityMeasurement inch = new QuantityMeasurement(Unit.INCH, 2);
+        QuantityMeasurement centimeter = new QuantityMeasurement(Unit.CENTIMETER, 5);
+        boolean compareCheck = centimeter.compareUnits(inch);
+        Assert.assertTrue(compareCheck);
+    }
 }

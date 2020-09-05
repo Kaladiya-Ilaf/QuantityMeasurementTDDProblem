@@ -585,6 +585,69 @@ public class QuantityMeasurementTest {
     }
 
     @Test
+    public void given2Weights_whenOfTypeGramAndBothHasValueZero_shouldBeEqual() {
+        QuantityMeasurement gram1 = new QuantityMeasurement(Unit.GRAM, 0.0);
+        QuantityMeasurement gram2 = new QuantityMeasurement(Unit.GRAM, 0.0);
+        Assert.assertEquals(gram1, gram2);
+    }
+
+    @Test
+    public void given2Weights_whenOfTypeGramAndBothHasValueZeroAndOne_shouldBeUnequal() {
+        QuantityMeasurement gram1 = new QuantityMeasurement(Unit.GRAM, 0.0);
+        QuantityMeasurement gram2 = new QuantityMeasurement(Unit.GRAM, 1.0);
+        Assert.assertNotEquals(gram1, gram2);
+    }
+
+    @Test
+    public void  given2Weights_whenOfTypeGramsAndBothHasValueZeroAndNull_shouldBeUnequal() {
+        QuantityMeasurement gram1 = new QuantityMeasurement(Unit.GRAM, 0.0);
+        QuantityMeasurement gram2 = null;
+        Assert.assertNotEquals(gram1,gram2);
+    }
+
+    @Test
+    public void  given1Weight_whenOfTypeGramAndHasValueNull_shouldReturnTrue() {
+        QuantityMeasurement gram = null;
+        boolean nullCheck = Objects.isNull(gram);
+        Assert.assertTrue(nullCheck);
+    }
+
+    @Test
+    public void  given1Weight_whenOfTypeGramAndHasValueNotNull_shouldReturnTrue() {
+        QuantityMeasurement gram = new QuantityMeasurement(Unit.GRAM, 0.0);
+        boolean nullCheck = Objects.nonNull(gram);
+        Assert.assertTrue(nullCheck);
+    }
+
+    @Test
+    public void  given2Weights_whenOfTypeGramAndBothHasSameReference_shouldBeEqual() {
+        QuantityMeasurement gram1 = new QuantityMeasurement(Unit.GRAM, 0.0);
+        QuantityMeasurement gram2 = gram1;
+        Assert.assertSame(gram1, gram2);
+    }
+
+    @Test
+    public void  given2Weights_whenOfTypeGramAndBothHasDifferentReference_shouldBeUnequal() {
+        QuantityMeasurement gram1 = new QuantityMeasurement(Unit.GRAM, 0.0);
+        QuantityMeasurement gram2 = new QuantityMeasurement(Unit.GRAM, 1.0);
+        Assert.assertNotSame(gram1, gram2);
+    }
+
+    @Test
+    public void given2Weights_whenHasSameTypesGrams_shouldBeEqual() {
+        QuantityMeasurement gram1 = new QuantityMeasurement(Unit.GRAM, 0.0);
+        QuantityMeasurement gram2 = new QuantityMeasurement(Unit.GRAM, 0.0);;
+        Assert.assertEquals(gram1.getClass(), gram2.getClass());
+    }
+
+    @Test
+    public void given2Weights_whenHasDifferentTypesGram_shouldBeUnequal() {
+        QuantityMeasurement gram = new QuantityMeasurement(Unit.GRAM, 0.0);
+        Integer int1 = 0;
+        Assert.assertNotEquals(gram.getClass(), int1.getClass());
+    }
+
+    @Test
     public void given2Weights_whenOfTypeKilogramAndBothHasValueZero_shouldBeEqual() {
         QuantityMeasurement kilogram1 = new QuantityMeasurement(Unit.KILOGRAM, 0.0);
         QuantityMeasurement kilogram2 = new QuantityMeasurement(Unit.KILOGRAM, 0.0);
@@ -646,5 +709,4 @@ public class QuantityMeasurementTest {
         Integer int1 = 0;
         Assert.assertNotEquals(kilogram.getClass(), int1.getClass());
     }
-
 }

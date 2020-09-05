@@ -538,5 +538,17 @@ public class QuantityMeasurementTest {
     }
 
 
+    @Test
+    public void given2Volume_whenHasSameTypesMillilitre_shouldBeEqual() {
+        QuantityMeasurement millilitre1 = new QuantityMeasurement(Unit.MILLILITRE, 0.0);
+        QuantityMeasurement millilitre2 = new QuantityMeasurement(Unit.MILLILITRE, 1.0);
+        Assert.assertEquals(millilitre1.getClass(), millilitre2.getClass());
+    }
 
+    @Test
+    public void given2Volumes_whenHasDifferentTypesMillilitre_shouldBeUnequal() {
+        QuantityMeasurement millilitre1 = new QuantityMeasurement(Unit.MILLILITRE, 0.0);
+        Integer int1 = 0;
+        Assert.assertNotEquals(millilitre1.getClass(), int1.getClass());
+    }
 }

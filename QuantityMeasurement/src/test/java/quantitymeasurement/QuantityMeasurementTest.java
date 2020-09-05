@@ -551,4 +551,12 @@ public class QuantityMeasurementTest {
         Integer int1 = 0;
         Assert.assertNotEquals(millilitre1.getClass(), int1.getClass());
     }
+
+    @Test
+    public void given2Volume_when1OfTypeGallonWithValue1And1OfTypeLitreWithValue3point78_shouldReturnTrue() {
+        QuantityMeasurement gallon = new QuantityMeasurement(Unit.GALLON, 1);
+        QuantityMeasurement litre = new QuantityMeasurement(Unit.LITRE, 3.78);
+        boolean compareCheck = gallon.compareUnits(gallon, litre);
+        Assert.assertTrue(compareCheck);
+    }
 }

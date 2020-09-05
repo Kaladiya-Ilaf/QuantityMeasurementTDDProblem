@@ -577,7 +577,7 @@ public class QuantityMeasurementTest {
     }
 
     @Test
-    public void given2Volumes_when1OfTypeLitreWithValue1And1OfTypeMiilliLitreWithValue1000_shouldRetrunAdditionInLitres() {
+    public void given2Volumes_when1OfTypeLitreWithValue1And1OfTypeMilliLitreWithValue1000_shouldReturnAdditionInLitres() {
         QuantityMeasurement millilitre = new QuantityMeasurement(Unit.MILLILITRE, 1000);
         QuantityMeasurement litre = new QuantityMeasurement(Unit.LITRE, 1);
         double sum = litre.add(litre, millilitre);
@@ -772,4 +772,13 @@ public class QuantityMeasurementTest {
         Integer int1 = 0;
         Assert.assertNotEquals(kilogram.getClass(), int1.getClass());
     }
+
+    @Test
+    public void given2Weights_when1OfTypeKilogramWithValue1And1OfTypeGramWithValue1000_shouldReturnTrue() {
+        QuantityMeasurement gram = new QuantityMeasurement(Unit.GRAM, 1000);
+        QuantityMeasurement kilogram = new QuantityMeasurement(Unit.KILOGRAM, 1);
+        boolean compareCheck = kilogram.compareUnits(kilogram, gram);
+        Assert.assertTrue(compareCheck);
+    }
+
 }

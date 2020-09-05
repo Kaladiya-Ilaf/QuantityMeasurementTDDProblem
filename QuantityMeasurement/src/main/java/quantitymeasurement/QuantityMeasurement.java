@@ -2,10 +2,13 @@ package quantitymeasurement;
 
 import java.util.Objects;
 
-public class Feet {
+public class QuantityMeasurement {
+    private final Unit unit;
+
     private final double value;
 
-    public Feet(double value) {
+    public QuantityMeasurement(Unit unit, double value) {
+        this.unit = unit;
         this.value = value;
     }
 
@@ -13,7 +16,7 @@ public class Feet {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Feet feet = (Feet) o;
+        QuantityMeasurement feet = (QuantityMeasurement) o;
         return Double.compare(feet.value, value) == 0;
     }
 
@@ -21,4 +24,5 @@ public class Feet {
     public int hashCode() {
         return Objects.hash(value);
     }
+
 }

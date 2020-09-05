@@ -559,4 +559,14 @@ public class QuantityMeasurementTest {
         boolean compareCheck = gallon.compareUnits(gallon, litre);
         Assert.assertTrue(compareCheck);
     }
+
+    @Test
+    public void given2Volume_when1OfTypeLitreWithValue1And1OfTypeMillilitreWithValue1000_shouldReturnTrue() {
+        QuantityMeasurement millilitre = new QuantityMeasurement(Unit.MILLILITRE, 1000);
+        QuantityMeasurement litre = new QuantityMeasurement(Unit.LITRE, 1);
+        boolean compareCheck = litre.compareUnits(litre, millilitre);
+        Assert.assertTrue(compareCheck);
+    }
+
+
 }

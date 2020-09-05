@@ -13,10 +13,6 @@ enum Unit {
         this.unitType = unitType;
         this.baseUnit = baseUnit;
     }
-    public double convertToUnit(double value){
-        return value * baseUnit;
-    }
-
 
 }
 

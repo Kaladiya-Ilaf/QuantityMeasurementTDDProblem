@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="quantitymeasurement.QuantityMeasurementTest" tests="49" skipped="0" failures="0" errors="0" timestamp="2020-09-05T05:30:09" hostname="ilaf-Inspiron-15-3567" time="0.066">
+<testsuite name="quantitymeasurement.QuantityMeasurementTest" tests="49" skipped="0" failures="0" errors="0" timestamp="2020-09-05T05:33:45" hostname="ilaf-Inspiron-15-3567" time="0.044">
   <properties/>
-  <testcase name="given2Lengths_whenOfTypeInchAndBothHasSameReference_shouldBeEqual" classname="quantitymeasurement.QuantityMeasurementTest" time="0.008"/>
-  <testcase name="given2Lengths_whenOfTypeCentimeterAndBothHasDifferentReference_shouldBeUnequal" classname="quantitymeasurement.QuantityMeasurementTest" time="0.001"/>
+  <testcase name="given2Lengths_whenOfTypeInchAndBothHasSameReference_shouldBeEqual" classname="quantitymeasurement.QuantityMeasurementTest" time="0.013"/>
+  <testcase name="given2Lengths_whenOfTypeCentimeterAndBothHasDifferentReference_shouldBeUnequal" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
   <testcase name="given2Lenghts_when1OfTypeInchWithValue2And1OfTypeCentimeterWithValue2AndHalf_shouldAdditionInInches" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
-  <testcase name="given2Lengths_whenHasSameTypesInch_shouldBeEqual" classname="quantitymeasurement.QuantityMeasurementTest" time="0.001"/>
-  <testcase name="given2Lengths_whenHasSameTypesYard_shouldBeEqual" classname="quantitymeasurement.QuantityMeasurementTest" time="0.002"/>
+  <testcase name="given2Lengths_whenHasSameTypesInch_shouldBeEqual" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
+  <testcase name="given2Lengths_whenHasSameTypesYard_shouldBeEqual" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
   <testcase name="given1Length_whenOfTypeYardAndHasValueNotNull_shouldReturnTrue" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
   <testcase name="given1Length_whenOfTypeCentimeterAndHasValueNotNull_shouldReturnTrue" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
   <testcase name="given1Length_whenOfTypeInchAndHasValueNotNull_shouldReturnTrue" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
-  <testcase name="given2Lenghts_when1OfTypeYardWithValue1And1OfTypeInchWithValue1_shouldReturnFalse" classname="quantitymeasurement.QuantityMeasurementTest" time="0.001"/>
+  <testcase name="given2Lenghts_when1OfTypeYardWithValue1And1OfTypeInchWithValue1_shouldReturnFalse" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
   <testcase name="given2Lengths_whenHasDifferentTypes_shouldBeUnequal" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
   <testcase name="given2Lenghts_whenBothOfTypeFeetWithValue1ForBoth_shouldAdditionInInches" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
   <testcase name="given2Lengths_whenOfTypeYardAndBothHasValueZeroAndNull_shouldBeUnequal" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
   <testcase name="given2Lengths_whenOfTypeFeetAndBothHasValueZero_shouldBeEqual" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
-  <testcase name="given1Length_whenOfTypeInchAndHasValueNull_shouldReturnTrue" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
-  <testcase name="given2Lengths_whenOfTypeCentimeterAndBothHasSameReference_shouldBeEqual" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
-  <testcase name="given2Lenghts_when1OfTypeInchWithValue36And1OfTypeYardWithValue1_shouldReturnFalse" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
-  <testcase name="given2Lengths_whenOfTypeFeetAndBothHasDifferentReference_shouldBeUnequal" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
+  <testcase name="given1Length_whenOfTypeInchAndHasValueNull_shouldReturnTrue" classname="quantitymeasurement.QuantityMeasurementTest" time="0.001"/>
+  <testcase name="given2Lengths_whenOfTypeCentimeterAndBothHasSameReference_shouldBeEqual" classname="quantitymeasurement.QuantityMeasurementTest" time="0.001"/>
+  <testcase name="given2Lenghts_when1OfTypeInchWithValue36And1OfTypeYardWithValue1_shouldReturnFalse" classname="quantitymeasurement.QuantityMeasurementTest" time="0.001"/>
+  <testcase name="given2Lengths_whenOfTypeFeetAndBothHasDifferentReference_shouldBeUnequal" classname="quantitymeasurement.QuantityMeasurementTest" time="0.001"/>
   <testcase name="given2Lengths_whenOfTypeYardAndBothHasValueZero_shouldBeEqual" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
-  <testcase name="given2Lengths_whenHasSameTypesCentimeter_shouldBeEqual" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
+  <testcase name="given2Lengths_whenHasSameTypesCentimeter_shouldBeEqual" classname="quantitymeasurement.QuantityMeasurementTest" time="0.001"/>
   <testcase name="given2Lengths_whenOfTypeFeetAndBothHasValueZeroAndNull_shouldBeUnequal" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
   <testcase name="given2Lengths_whenOfTypeFeetAndBothHasValueZeroAndOne_shouldBeUnequal" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
-  <testcase name="given2Lenghts_when1OfTypeFeetWithValue1And1OfTypeInchWithValue2_shouldAdditionInInches" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
+  <testcase name="given2Lenghts_when1OfTypeFeetWithValue1And1OfTypeInchWithValue2_shouldAdditionInInches" classname="quantitymeasurement.QuantityMeasurementTest" time="0.001"/>
   <testcase name="given2Lengths_whenOfTypeInchAndBothHasDifferentReference_shouldBeUnequal" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
   <testcase name="given2Lengths_whenHasSameTypes_shouldBeEqual" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
   <testcase name="given1Length_whenOfTypeCenAndHasValueNull_shouldReturnTrue" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
@@ -31,16 +31,16 @@
   <testcase name="given2Lengths_whenOfTypeYardAndBothHasDifferentReference_shouldBeUnequal" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
   <testcase name="given2Lenghts_when1OfTypeYardWithValue1And1OfTypeFeetWithValue3_shouldReturnTrue" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
   <testcase name="given2Lengths_whenOfTypeCentimeterAndBothHasValueZeroAndNull_shouldBeUnequal" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
-  <testcase name="given2Lengths_whenHasDifferentTypesInchAndInteger_shouldBeUnequal" classname="quantitymeasurement.QuantityMeasurementTest" time="0.001"/>
-  <testcase name="given2Lengths_whenOfTypeCentimeterAndBothHasValueZeroAndOne_shouldBeUnequal" classname="quantitymeasurement.QuantityMeasurementTest" time="0.001"/>
+  <testcase name="given2Lengths_whenHasDifferentTypesInchAndInteger_shouldBeUnequal" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
+  <testcase name="given2Lengths_whenOfTypeCentimeterAndBothHasValueZeroAndOne_shouldBeUnequal" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
   <testcase name="given2Lenghts_when1OfTypeCentimeterWithValue5And1OfTypeInchWithValue2_shouldReturnFalse" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
   <testcase name="given2Lengths_whenOfTypeInchAndBothHasValueZeroAndNull_shouldBeUnequal" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
-  <testcase name="given1Length_whenOfTypeFeetAndHasValueNull_shouldReturnTrue" classname="quantitymeasurement.QuantityMeasurementTest" time="0.001"/>
+  <testcase name="given1Length_whenOfTypeFeetAndHasValueNull_shouldReturnTrue" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
   <testcase name="given2Lenghts_when1OfTypeFeetWithValue3And1OfTypeYardWithValue1_shouldReturnTrue" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
-  <testcase name="given2Lengths_whenOfTypeYardAndBothHasSameReference_shouldBeEqual" classname="quantitymeasurement.QuantityMeasurementTest" time="0.001"/>
-  <testcase name="given2Lengths_whenOfTypeCentimeterAndBothHasValueZero_shouldBeEqual" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
-  <testcase name="given2Lenghts_when1OfTypeInchWithValue12And1OfTypeFeetWithValue1_shouldReturnTrue" classname="quantitymeasurement.QuantityMeasurementTest" time="0.001"/>
-  <testcase name="given2Lenghts_when1OfTypeYardWithValue1And1OfTypeFeetWithValue1_shouldReturnFalse" classname="quantitymeasurement.QuantityMeasurementTest" time="0.002"/>
+  <testcase name="given2Lengths_whenOfTypeYardAndBothHasSameReference_shouldBeEqual" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
+  <testcase name="given2Lengths_whenOfTypeCentimeterAndBothHasValueZero_shouldBeEqual" classname="quantitymeasurement.QuantityMeasurementTest" time="0.004"/>
+  <testcase name="given2Lenghts_when1OfTypeInchWithValue12And1OfTypeFeetWithValue1_shouldReturnTrue" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
+  <testcase name="given2Lenghts_when1OfTypeYardWithValue1And1OfTypeFeetWithValue1_shouldReturnFalse" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
   <testcase name="given2Lengths_whenOfTypeInchAndBothHasValueZeroAndOne_shouldBeUnequal" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
   <testcase name="given2Lengths_whenOfTypeInchAndBothHasValueZero_shouldBeEqual" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>
   <testcase name="given1Length_whenOfTypeYardAndHasValueNull_shouldReturnTrue" classname="quantitymeasurement.QuantityMeasurementTest" time="0.0"/>

@@ -24,12 +24,6 @@ public class QuantityMeasurement {
         return Double.compare(feet.value, value) == 0;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(value);
-    }
-
-
     public  boolean compareUnits(QuantityMeasurement comparator1, QuantityMeasurement comparator2)
     {
         return compare.compareTo(comparator1,comparator2);

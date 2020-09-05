@@ -203,4 +203,12 @@ public class QuantityMeasurementTest {
         Integer int1 = 0;
         Assert.assertNotEquals(yard1.getClass(), int1.getClass());
     }
+
+    @Test
+    public void given2Lenghts_when1YardWithValue1And1FeetWithValue3_shouldReturnTrue() {
+        QuantityMeasurement feet = new QuantityMeasurement(Unit.FEET, 3);
+        QuantityMeasurement yard = new QuantityMeasurement(Unit.YARD, 1);
+        boolean compareCheck = feet.compare(yard);
+        Assert.assertTrue(compareCheck);
+    }
 }

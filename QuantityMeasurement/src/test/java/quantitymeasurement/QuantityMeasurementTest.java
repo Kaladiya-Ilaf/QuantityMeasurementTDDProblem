@@ -405,7 +405,7 @@ public class QuantityMeasurementTest {
     }
 
     @Test
-    public void  given2Volumes_whenOfTypeFeetAndBothHasDifferentReference_shouldBeUnequal() {
+    public void  given2Volumes_whenOfTypeGallonAndBothHasDifferentReference_shouldBeUnequal() {
         QuantityMeasurement gallon1 = new QuantityMeasurement(Unit.GALLON, 0.0);
         QuantityMeasurement gallon2 = new QuantityMeasurement(Unit.GALLON, 1.0);
         Assert.assertNotSame(gallon1, gallon2);
@@ -458,6 +458,20 @@ public class QuantityMeasurementTest {
         QuantityMeasurement litre = new QuantityMeasurement(Unit.LITRE, 0.0);
         boolean nullCheck = Objects.nonNull(litre);
         Assert.assertTrue(nullCheck);
+    }
+
+    @Test
+    public void  given2Volumes_whenOfTypeLitreAndBothHasSameReference_shouldBeEqual() {
+        QuantityMeasurement litre1 = new QuantityMeasurement(Unit.LITRE, 0.0);
+        QuantityMeasurement litre2 = litre1;
+        Assert.assertSame(litre1, litre2);
+    }
+
+    @Test
+    public void  given2Volumes_whenOfTypeLitreAndBothHasDifferentReference_shouldBeUnequal() {
+        QuantityMeasurement litre1 = new QuantityMeasurement(Unit.LITRE, 0.0);
+        QuantityMeasurement litre2 = new QuantityMeasurement(Unit.LITRE, 1.0);
+        Assert.assertNotSame(litre1, litre2);
     }
 
 }
